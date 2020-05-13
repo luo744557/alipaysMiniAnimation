@@ -1,0 +1,294 @@
+page, .main-page, .cover {
+  overflow: hidden;
+}
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+.box {
+  position: absolute;
+  left: 50vw;
+  bottom: 45vh;
+  z-index: 19;
+  transform: translateX(-50%);
+  width: 180rpx;
+  height: 190rpx;
+  text-align: center;
+  opacity: 0;
+}
+.box image {
+  width: 180rpx;
+  height: 190rpx;
+}
+.box .light {
+  margin: 0 auto;
+  width: 190rpx;
+  height: 112rpx;
+  transform: translateY(-162rpx);
+  animation: lightAnimation 0.8s infinite;
+}
+.box-item {
+  position: absolute;
+  top: calc(100vh - 10rpx);
+  left: 50vw;
+  z-index: 11;
+  width: 20rpx;
+  height: 20rpx;
+  opacity: 0;
+}
+.box-item image {
+  width: 100%;
+  height: 100%;
+}
+.receive-btn-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 11;
+  width: 100vw;
+}
+.receive-btn {
+  width: calc(50vw - 5rpx);
+  height: 94rpx;
+  background: #ff3939;
+  color: white;
+  line-height: 94rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border-radius: 30rpx 30rpx 0px 0px;
+}
+.prize-bg {
+  position: absolute;
+  left: 0;
+  bottom: calc(40rpx - 100vh);
+  z-index: 10;
+  width: 100vw;
+  height: calc(100vh - 40rpx);
+  background: #f7f7f7;
+}
+.main-title {
+  margin: 16rpx 0 16rpx 58rpx;
+  width: 235rpx;
+  height: 40rpx;
+}
+.main-title image {
+  width: 235rpx;
+  height: 40rpx;
+}
+.prize-intro {
+  margin: 0 auto;
+  padding: 0 0 20rpx 0;
+  width: 690rpx;
+  height: auto;
+  background: #f7ffff;
+  border-radius: 10rpx;
+}
+.title {
+  text-align: left;
+  padding: 15rpx 0 0 30rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #313131;
+}
+.swiper-index {
+  margin: 20rpx 0 20rpx 570rpx;
+  width: 88rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  color: #313131;
+  border: 1rpx solid #313131;
+  border-radius: 27rpx;
+}
+swiper-item {
+  width: 100%;
+  height: auto;
+}
+.prize-intro-container {
+  padding: 0 30rpx;
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.prize-intro .item {
+  margin: 10rpx 0 0 0;
+  width: 150rpx;
+  height: 120rpx;
+}
+.prize-intro .item image {
+  width: 150rpx;
+  height: 120rpx;
+}
+.prize-content {
+  margin: 20rpx 30rpx 0 30rpx;
+  padding: 0 0 20rpx 0;
+  width: 690rpx;
+  height: auto;
+  background: #f7ffff;
+  border-radius: 10rpx;
+  opacity: 0;
+}
+.prize-content-container {
+  display: flex;
+  justify-content:space-between;
+  padding: 0 30rpx;
+}
+.prize-content .item {
+  margin: 12rpx auto 0 auto;
+  width: 150rpx;
+  height: 180rpx;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.luck-drew-result {
+  position: absolute;
+  left: 30rpx;
+  z-index: 19;
+  top: calc(100vh + 240rpx);
+  width: 690rpx;
+  height: 240rpx;
+  border-radius: 10rpx;
+  background-color: #e79c39;
+  overflow: hidden;
+}
+.luck-drew-result .light-rays {
+  margin: -225rpx 0 0 0;
+  width: 690rpx;
+  height: 690rpx;
+}
+.draw-result-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 690rpx;
+  height: 240rpx;
+}
+.draw-result-icons image {
+  width: 140rpx;
+  height: 140rpx;
+}
+.draw-result-icons .query-icon {
+  margin: 0 55rpx;
+  width: 200rpx;
+  height: 200rpx;
+  opacity: 0;
+}
+.draw-result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 60rpx 0 0 0;
+  width: 690rpx;
+  height: 240rpx;
+  background: #5a5a59;
+  color: #ffffff;
+  text-align: center;
+  line-height: 52rpx;
+  font-size: 36rpx;
+  font-weight: blod;
+}
+
+.prize-content-animation {
+  animation: riseAndScale 0.4s linear 1.6s 1;
+  animation-fill-mode: forwards;
+}
+.background-rise {
+  animation: prizeBgRise 0.8s linear 0.8s 1;
+  animation-fill-mode: forwards;
+}
+.ray-rotate {
+  animation: rotate 2s linear 0.4s 1;
+  animation-fill-mode: forwards;
+}
+.sad-icon-animation {
+  animation: sadAnimation 0.8s linear 0.05s 1;
+}
+.happy-icon-animation {
+  animation: sadAnimation 0.8s linear 0.2s 1;
+}
+.query-icon-animation {
+  animation: qyeryAnimation 1.2s linear 0.4s 1;
+}
+
+@keyframes lightAnimation {
+  0% {
+    transform: translateY(-162rpx) scale(1.25);
+    opacity: 1；
+  }
+  50% {
+    transform: translateY(-162rpx) scale(1);
+    opacity: 0.75；
+  }
+  100% {
+    transform: translateY(-162rpx) scale(1.25);
+    opacity: 1；
+  }
+}
+@keyframes prizeBgRise {
+  0% {
+    bottom: -90vh;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes riseAndScale {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes sadAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes qyeryAnimation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}

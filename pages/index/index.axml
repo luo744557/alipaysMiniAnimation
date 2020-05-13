@@ -1,0 +1,153 @@
+<view class="main-page">
+  <view class="cover">
+    <!-- <image mode="scaleToFill" src=""/> -->
+    <view class="prize-bg {{backgroundAnimationClass}}" style="height: {{backgroundHeight}}">
+      <view class="main-title">
+        <image src="../../img/main-title.png" />
+      </view>
+      <view class="prize-intro">
+        <view class="title">必得的啊</view>
+        <swiper
+          onChange="getIndexNumber"
+          indicator-dots="{{false}}"
+          autoplay="{{true}}"
+          circular="{{true}}"
+          disable-touch="{{true}}"
+        >
+          <swiper-item>
+            <view class="prize-intro-container" >
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+            </view>
+          </swiper-item>
+          <!-- <swiper-item>
+            <view class="prize-intro-container">
+             <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <view class="prize-intro-container">
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-2.png"/>
+              </view>
+              <view class="item">
+                <image mode="scaleToFill" src="../../img/coupon-bg-1.png"/>
+              </view>
+            </view>
+          </swiper-item> -->
+        </swiper>
+        <!-- <view class="swiper-index">{{indexNumber}}/3</view> -->
+      </view>
+      <view class="prize-content {{prizeAnimationClass}}">
+        <view class="title">随机权益</view>
+        <view class="prize-content-container">
+          <view class="item" style="background-image: url(../../img/right-default-bg.png);">
+          </view>
+          <view class="item" style="background-image: url(../../img/right-default-bg.png);">
+          </view>
+          <view class="item" style="background-image: url(../../img/right-default-bg.png);">
+          </view>
+          <view class="item" style="background-image: url(../../img/right-default-bg.png);">
+          </view>
+        </view>
+      </view>
+      <view class="receive-btn-container"> 
+        <view class="receive-btn">领取</view>
+        <view class="receive-btn">领取</view>
+      </view>
+    </view>
+    <view class="luck-drew-result" animation="{{drewResultAnimation}}">
+      <image class="light-rays {{rayRotateClass}}" mode="scaleToFill" src="../../img/rays-light.png" />
+      <view class="draw-result" style="opacity:{{showFinalStatus}}">
+        这就是结果
+      </view>
+      <view class="draw-result-icons">
+        <image mode="scaleToFill" class="sad-icon {{sadAnimationClass}}" style="opacity:{{showSadIncon}}" src="{{sadInconLink}}"/>
+        <image mode="scaleToFill" class="query-icon {{queryAnimationClass}}" src="../../img/query-icon.png"/>
+        <image mode="scaleToFill" class="happy-icon {{happyAnimationClass}}" style="opacity:{{showHappyIcon}}" src="../../img/happy-icon.png"/>
+      </view>
+    </view>
+    <view class="box" animation="{{boxMoveAnimation}}">
+      <image mode="scaleToFill" a:if="{{box1}}" src="../../img/1.png"/>
+      <image mode="scaleToFill" a:if="{{box2}}" src="../../img/2.png"/>
+      <image mode="scaleToFill" a:if="{{box3}}" src="../../img/3.png"/>
+      <image mode="scaleToFill" a:if="{{box4}}" src="../../img/4.png"/>
+      <image class="light" a:if="{{showLight}}" mode="scaleToFill" src="../../img/light.png"/>
+    </view>
+    <view class="box-item" animation="{{animation}}">
+      <image mode="scaleToFill" src="../../img/right-bg-1.png"/>
+    </view>
+    <view class="box-item" animation="{{animation_1}}">
+      <image mode="scaleToFill" src="../../img/right-bg-2.png"/>
+    </view>
+    <view class="box-item" animation="{{animation_2}}">
+      <image mode="scaleToFill" src="../../img/right-bg-3.png"/>
+    </view>
+    <view class="box-item" animation="{{animation_3}}">
+      <image mode="scaleToFill" src="../../img/right-bg-4.png"/>
+    </view>
+  </view>
+</view>
